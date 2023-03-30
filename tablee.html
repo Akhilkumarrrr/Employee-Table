@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .table{position:relative; bottom:190px;left:40%}
+        .emp{position:relative;top:20px;;left:43%}
+           
+        .name{position: relative;top:50px;left:1300px}
+        .topnav{background-color:aquamarine;position: relative;bottom:40px;padding-bottom:10px}
+        .tab{position: relative;top:20px;left:16%;}
+        .headings{background-color: orange;}
+
+
+
+
+
+
+
+        /* .loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 1s linear infinite;
+  
+  animation: spin 1s linear infinite;
+}
+
+
+
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+
+.loader {    
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid blue;
+      width: 120px;
+      height: 120px;
+    
+      border-right: 16px solid green;
+      border-bottom: 16px solid red;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+    
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .logout{
+      padding:20px;
+      padding-top:20px;
+      padding-left:1390px;
+    }
+    .circular_image {
+  width: 150px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  top:20px;
+  left:1300px;
+  /* padding-top: 210px;
+  padding-left: 200px; */
+  /* commented for demo
+  float: left;
+  margin-left: 125px;
+  margin-top: 20px;
+  */
+  
+  /*for demo*/
+  display:inline-block;
+  vertical-align:middle;
+}
+.circular_image img{
+  width:100%;
+}
+.navbar {
+  background-color: #3b5998;
+  overflow: hidden;
+  height: 73px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar ul {
+  margin: 8px 0 0 0;
+  list-style: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+.side-nav .btn-close {
+  /* postion: absolute; */
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 90px;
+}
+
+
+
+@media(max-width: 568px) {
+  .navbar-nav {
+    display: none
+  }
+}
+#wrapper input text{
+  flex:5;
+} 
+    
+    
+        </style>
+
+    </head>
+    <body>
+      <nav class="navbar">
+        <!-- <span class="open-slide"> -->
+        <a href="#" onClick="openSlideMenu()">
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke=#fff stroke-width="5"/>
+            <path d="M0,14 30,14" stroke=#fff stroke-width="5"/>
+            <path d="M0,23 30,23" stroke=#fff stroke-width="5"/>
+          </svg>
+        </a>
+      </span>
+        <!-- <ul class="navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul> -->
+      </nav>
+  
+      <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onClick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+     
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+  
+     
+      
+  
+  
+        <div class="topnav">
+          <div class="name">
+            <h3>john</h3>
+        </div>
+          <div class="circular_image">
+            <img src="http://placekitten.com/500/500"/>
+          </div>
+            <div class="logout">
+              <a href="newpage.html" id="LogoutAction"><button>Logout</button></a>
+    
+            </div>
+            
+    </div>
+
+
+          
+          
+           <div class="emp">
+        <h1><u>Employees Detailes</u></h1>
+    </div>
+    <div class="tab">
+    Employee Name:<input type="text" name='EmployeeName' id="EmployeeName" /><br/><br/>
+Department:<input type="text" name='Department' id="Department"/><br/><br/>
+Id:<input type="text" name='Id' id="Id"/><br/><br/>
+PhoneNumber:<input type="text" name='PhoneNumber' id="PhoneNumber"/><br/><br/>
+
+
+         <button onclick="addHtmlTableRow();">Add</button>
+         <button onclick="editSelectedRow()">Edit</button>
+
+        
+
+          
+         <div id="demo2">  </div>
+         
+         <!-- <input type="text" id="demo"/> -->
+         <button  onclick="removeSelectedRow(),myFunction()"  id="demo">remove</button>
+      
+        </div>
+        <div class="table">
+        <table id="table" border="15">
+            
+            
+            <tr class="headings" >
+                <th><h3>Employeename</h3></th>
+                <th><h3>Department</h3></th>
+                <th><h3>Id</h3></th>
+                <th><h3>PhoneNumber</h3></th>
+            </tr>
+        </div>
+        </table>
+        
+            
+        
+        <script>
+            
+            var array = [["Raju","developer","234","9876789877"],
+                         ["ramu","sales","555","8989897778"],
+                         ["gopal","associate","787","7879787879"],
+                         ["pavan","engineer","989","9898787898"],
+                         ["varma","sales","454","8789878989"]],
+                        
+                table = document.getElementById("table");
+     
+           
+           for(var i = 0; i < array.length; i++)
+           {
+               // create a new row
+               var newRow = table.insertRow(table.length);
+               for(var j = 0; j < array[i].length; j++)
+               {
+                   // create a new cell
+                   var cell = newRow.insertCell(j);
+                   
+                   // add value to the cell
+                   cell.innerHTML = array[i][j];
+               }
+           }
+        </script>
+        
+     <script>
+         function addHtmlTableRow(){
+		 console.log("Hitted add");
+            var table = document.getElementById("table"),
+			
+            newRow = table.insertRow(table.length),
+			
+            cell1 = newRow.insertCell(0),
+            cell2 = newRow.insertCell(1),
+            cell3 = newRow.insertCell(2),
+            cell4 = newRow.insertCell(3),
+            
+
+			Employeename = document.getElementById('EmployeeName').value,
+            Department = document.getElementById("Department").value,
+            Id = document.getElementById("Id").value,
+            PhoneNumber = document.getElementById("PhoneNumber").value;
+
+            cell1.innerHTML = Employeename;
+            cell2.innerHTML = Department;
+            cell3.innerHTML = Id;
+            cell4.innerHTML = PhoneNumber;
+
+
+         }
+       function selectedRowToInput(){
+        var rIndex,table=document.getElementById("table");
+        for(var i=0; i< table.rows.length;i++)
+        {
+            table.rows[i].onclick = function(){
+                rIndex = this.rowIndex;
+                console.log(rIndex);
+            };
+        }
+       }
+
+function removeSelectedRow() {
+  document.getElementById("table").deleteRow(1);
+}
+ 
+    var table = document.getElementById("table"),rIndex;
+            
+            for(var i = 1; i < table.rows.length; i++)
+            {
+                table.rows[i].onclick = function()
+                {
+                    rIndex = this.rowIndex;
+                    console.log(rIndex);
+                    
+                    document.getElementById("EmployeeName").value = this.cells[0].innerHTML;
+                    document.getElementById("Department").value = this.cells[1].innerHTML;
+                    document.getElementById("Id").value = this.cells[2].innerHTML;
+                    document.getElementById("PhoneNumber").value = this.cells[3].innerHTML;
+
+                };
+            }
+            
+           // edit the row
+            function editSelectedRow()
+            {
+                table.rows[rIndex].cells[0].innerHTML = document.getElementById("EmployeeName").value;
+                table.rows[rIndex].cells[1].innerHTML = document.getElementById("Department").value;
+                table.rows[rIndex].cells[2].innerHTML = document.getElementById("Id").value;
+                table.rows[rIndex].cells[3].innerHTML = document.getElementById("PhoneNumber").value;
+
+            }
+
+//             function myFun() {
+//   var a = document.getElementById("demo").value;
+//   document.getElementById("demo2").innerHTML = "";
+//   document.getElementById("demo2").classList.add("loader");
+//   setTimeout(function() {
+//     document.getElementById("demo2").classList.remove("loader");
+//     document.getElementById("demo2").innerHTML = a;
+//   }, 2000);
+// }
+var myVar;
+    function myFunction() {
+    
+      myVar = document.getElementById("demo").value;
+      document.getElementById("demo2").innerHTML = "";
+      document.getElementById("demo2").classList.add("loader");
+         setTimeout(showPage, 3000);
+    
+    }
+    
+    function showPage() {
+    
+        document.getElementById("demo2").classList.remove("loader");
+        document.getElementById("demo2").innerHTML = myVar;
+        document.getElementById("demo").value = "";
+    
+    }
+    function openSlideMenu() {
+  document.getElementById('side-menu').style.width = '230px';
+  document.getElementById('side-menu').style.marginLeft = '0px';
+}
+
+function closeSlideMenu() {
+  document.getElementById('side-menu').style.width = '0px';
+  document.getElementById('side-menu').style.marginLeft = '0px';
+}
+    </script>
+
+
+
+
+
+     </script>
+    </body>
